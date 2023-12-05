@@ -24,12 +24,12 @@ public class PathGenerator
         //    pathCells.Add(new Vector2Int(x, y));
         //}
 
-        while(x < width)
+        while (x < width)
         {
             pathCells.Add(new Vector2Int(x, y));
 
             bool validMove = false;
-            
+
             while (!validMove)
             {
                 int direction = Random.Range(1, 3);
@@ -43,12 +43,12 @@ public class PathGenerator
                     x++;
                     validMove = true;
                 }
-                else if(direction == 2 && !IsFreeMove(x, y + 1) && y < height - 3)
+                else if (direction == 2 && !IsFreeMove(x, y + 1) && y < height - 3)
                 {
                     y++;
                     validMove = true;
                 }
-                else if(direction == 3 && !IsFreeMove(x, y - 1) && y < 2)
+                else if (direction == 3 && !IsFreeMove(x, y - 1) && y < 2)
                 {
                     y--;
                     validMove = true;
@@ -61,6 +61,33 @@ public class PathGenerator
     private bool IsFreeMove(int x, int y)
     {
         return pathCells.Contains(new Vector2Int(x, y));
+    }
+
+    public int getCellNeighbourValue(int x, int y) {
+        
+        int returnValue = 0;
+
+        if(!IsFreeMove(x, y - 1))
+        {
+            returnValue += 1;
+        }
+
+        if(!IsFreeMove(x - 1, y))
+        {
+            returnValue += 2;
+        }
+
+        if (!IsFreeMove(x + 1, y))
+        {
+            returnValue += 4;
+        }
+
+        if (!IsFreeMove(x, y + 1))
+        {
+            returnValue += 8;
+        }
+
+        return returnValue;
     }
 
 }

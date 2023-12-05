@@ -18,7 +18,7 @@ public class girdPathManager : MonoBehaviour
         pathGenerator = new PathGenerator(gridWidth, gridHeight);
         List<Vector2Int> pathCells = pathGenerator.PathGenerate();
         pathSize = pathCells.Count;
-        BoardSizeManage();
+        //BoardSizeManage();
         StartCoroutine(GeneratePath(pathCells));
     }
 
