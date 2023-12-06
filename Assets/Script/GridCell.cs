@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="GridCell", menuName ="TheArrange/GridCell")]
-
+[CreateAssetMenu(fileName ="GridCell", menuName ="PathObjects/GridCell")]
 public class GridCell : ScriptableObject
 {
     public enum CellType { Path, Ground }

@@ -330,7 +330,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02693adddeaa49c44a9a36af7551a741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: {fileID: 919132149155446097, guid: 4337e123cf9503e4e9541ffb73a0a5c4, type: 3}
+  gridWidth: 16
+  gridHeight: 8
+  minPathLength: 25
+  tile: {fileID: 919132149155446097, guid: 4337e123cf9503e4e9541ffb73a0a5c4, type: 3}
+  gridCells:
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
+  - {fileID: 11400000, guid: 47fd331906622bc48a0f0d424482b880, type: 2}
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
+  - {fileID: 11400000, guid: e8b70ded668909e4e89f2db6a7e4579a, type: 2}
 --- !u!4 &2064166194
 Transform:
   m_ObjectHideFlags: 0

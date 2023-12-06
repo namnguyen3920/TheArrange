@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class PathGenerator
 {
-    public int width;
-    public int height;
-    public List<Vector2Int> pathCells;
+    private int width;
+    private int height;
+    private List<Vector2Int> pathCells;
     public PathGenerator(int width, int height)
     {
         this.width = width;
@@ -32,23 +32,23 @@ public class PathGenerator
 
             while (!validMove)
             {
-                int direction = Random.Range(1, 3);
+                int direction = Random.Range(0, 3);
 
                 // 1: straight
                 // 2: left
                 // 3: right
 
-                if (direction == 1 || x % 2 == 0)
+                if (direction == 0 || x % 2 == 0 || x > (width - 2))
                 {
                     x++;
                     validMove = true;
                 }
-                else if (direction == 2 && !IsFreeMove(x, y + 1) && y < height - 3)
+                else if (direction == 1 && IsFreeMove(x, y + 1) && y < height - 2)
                 {
                     y++;
                     validMove = true;
                 }
-                else if (direction == 3 && !IsFreeMove(x, y - 1) && y < 2)
+                else if (direction == 2 && IsFreeMove(x, y - 1) && y > 2)
                 {
                     y--;
                     validMove = true;
@@ -58,7 +58,12 @@ public class PathGenerator
         return pathCells;
     }
 
-    private bool IsFreeMove(int x, int y)
+    public bool IsFreeMove(int x, int y)
+    {
+        return !pathCells.Contains(new Vector2Int(x, y));
+    }
+
+    public bool IsTakenCell(int x, int y)
     {
         return pathCells.Contains(new Vector2Int(x, y));
     }
@@ -67,22 +72,22 @@ public class PathGenerator
         
         int returnValue = 0;
 
-        if(!IsFreeMove(x, y - 1))
+        if(IsTakenCell(x, y - 1))
         {
             returnValue += 1;
         }
 
-        if(!IsFreeMove(x - 1, y))
+        if(IsTakenCell(x - 1, y))
         {
             returnValue += 2;
         }
 
-        if (!IsFreeMove(x + 1, y))
+        if (IsTakenCell(x + 1, y))
         {
             returnValue += 4;
         }
 
-        if (!IsFreeMove(x, y + 1))
+        if (IsTakenCell(x, y + 1))
         {
             returnValue += 8;
         }
