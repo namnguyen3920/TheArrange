@@ -34,7 +34,7 @@ public class GridManager : MonoBehaviour
             GameObject pathTile = pathCellsObjects[neighbourValue].cellPrefabs;
             GameObject pathTileCell = Instantiate(pathTile, new Vector3(pathCell.x, 0f, pathCell.y), Quaternion.identity);
             pathTileCell.transform.Rotate(0f, pathCellsObjects[neighbourValue].yRotation, 0f, Space.Self);
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(0f);
         }
         yield return null;
     }
@@ -48,7 +48,7 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    IEnumerator GenerateSceneObjects()
+    IEnumerator GenerateSceneObjects()  
     {
         for(int x = 0; x < gridWidth; x++)
         {
@@ -58,7 +58,7 @@ public class GridManager : MonoBehaviour
                 {
                     int randomSceneObjects = Random.Range(0, sceneObjects.Length-1);
                     Instantiate(sceneObjects[randomSceneObjects].cellPrefabs, new Vector3(x, 0f, y), Quaternion.identity);
-                    yield return new WaitForSeconds(0.01f);
+                    yield return new WaitForSeconds(0f);
                 }
                 
             }
