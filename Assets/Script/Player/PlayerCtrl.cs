@@ -71,23 +71,25 @@ public class PlayerCtrl : MonoBehaviour
 
         if(Physics.Raycast(checkCollision.transform.position, lastInteractDir, out RaycastHit rayCastHit, 2f))
         {
-            if(rayCastHit.transform.TryGetComponent(out ClearConveyor clearConveyor)){
+            if (rayCastHit.transform.TryGetComponent(out ClearConveyor clearConveyor)) {
                 //clearConveyor.Interact();
                 SetSelectedObjects(clearConveyor);
 
-            //    if (clearConveyor != selectedConveyor)
-            //    {
-            //        SetSelectedObjects(clearConveyor);                    
-            //    }
-            //    else
-            //    {
-            //        SetSelectedObjects(null);
-            //    }
-            //}
-            //else
-            //{
-            //    SetSelectedObjects(null);
+                //    if (clearConveyor != selectedConveyor)
+                //    {
+                //        SetSelectedObjects(clearConveyor);                    
+                //    }
+                //    else
+                //    {
+                //        SetSelectedObjects(null);
+                //    }
+                //}
             }
+            else
+                {
+                    SetSelectedObjects(null);
+                }
+            
         }
         Debug.Log(selectedConveyor);
     }
