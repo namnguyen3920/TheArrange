@@ -24,6 +24,7 @@ public class UISprAnim : MonoBehaviour
         FadeOut(canvasGroupMenu, rectTransformMenu);
         FadeIn(canvasGroupSetting, rectTransformSetting);
     }
+
     private void FadeIn(CanvasGroup canvasGroup, RectTransform rectTransform)
     {
         canvasGroup.alpha = 0f;

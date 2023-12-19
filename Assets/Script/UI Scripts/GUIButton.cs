@@ -12,7 +12,12 @@ public class GUIButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     private Button btn;
     [SerializeField] private Image img;
     [SerializeField] Sprite onPressSprite, defaultSprite;
+    [SerializeField] private GameObject guiButton;
 
+    private void Update()
+    {
+        //OnClickCheckBox();
+    }
     public void OnPointerEnter(PointerEventData eventData)
     {
         img.sprite = onPressSprite;
@@ -21,5 +26,14 @@ public class GUIButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public void OnPointerExit(PointerEventData eventData)
     {
         img.sprite = defaultSprite;
+    }
+
+    public void OnClickCheckBox()
+    {
+        if (guiButton.activeInHierarchy == true)
+        {
+            guiButton.SetActive(false);
+        }
+        else guiButton.SetActive(true);
     }
 }
