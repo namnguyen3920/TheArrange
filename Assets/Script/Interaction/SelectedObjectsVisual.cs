@@ -5,7 +5,7 @@ using UnityEngine;
 public class SelectedObjectsVisual : MonoBehaviour
 {
 
-    [SerializeField] private ClearConveyor clearConveyor;
+    [SerializeField] private BaseConveyor clearConveyor;
     [SerializeField] private GameObject visualGameObject;
     private void Start()
     {

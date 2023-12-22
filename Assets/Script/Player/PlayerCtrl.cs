@@ -6,7 +6,7 @@ using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerCtrl : MonoBehaviour
+public class PlayerCtrl : MonoBehaviour, IGoodsObjectsParent
 {
 
     public static PlayerCtrl Instance { get; private set; }
@@ -15,7 +15,7 @@ public class PlayerCtrl : MonoBehaviour
 
     public class OnSelectedChangedArgs : EventArgs
     {
-        public ClearConveyor selectedConveyor;
+        public BaseConveyor selectedConveyor;
     }
 
 
@@ -26,9 +26,11 @@ public class PlayerCtrl : MonoBehaviour
     private float moveDistance;
     [SerializeField] private GameObject checkCollision;
     [SerializeField] private GameInput gameInput;
+    [SerializeField] private Transform goodsObjectHoldPoint;
 
     bool isWalking;
-    private ClearConveyor selectedConveyor;
+    private BaseConveyor selectedConveyor;
+    private GoodsObject goodsObject;
     Vector3 lastInteractDir;
 
     private void Awake()
@@ -46,8 +48,9 @@ public class PlayerCtrl : MonoBehaviour
     private void GameInput_OnInteractAction(object sender, System.EventArgs e)
     {
         if(selectedConveyor != null)
+        
         {
-            selectedConveyor.Interact();
+            selectedConveyor.Interact(this);
         }
     }
 
@@ -71,7 +74,7 @@ public class PlayerCtrl : MonoBehaviour
 
         if(Physics.Raycast(checkCollision.transform.position, lastInteractDir, out RaycastHit rayCastHit, 2f))
         {
-            if (rayCastHit.transform.TryGetComponent(out ClearConveyor clearConveyor)) {
+            if (rayCastHit.transform.TryGetComponent(out BaseConveyor clearConveyor)) {
                 //clearConveyor.Interact();
                 SetSelectedObjects(clearConveyor);
 
@@ -86,14 +89,17 @@ public class PlayerCtrl : MonoBehaviour
                 //}
             }
             else
-                {
-                    SetSelectedObjects(null);
-                }
-            
+            {
+                SetSelectedObjects(null);
+            }
         }
-        Debug.Log(selectedConveyor);
+        else
+        {
+            SetSelectedObjects(null);
+        }
+        //Debug.Log(selectedConveyor);
     }
-    private void SetSelectedObjects(ClearConveyor selectedConveyor)
+    private void SetSelectedObjects(BaseConveyor selectedConveyor)
     {
         this.selectedConveyor = selectedConveyor;
         OnSelectedChanged?.Invoke(this, new OnSelectedChangedArgs
@@ -159,11 +165,25 @@ public class PlayerCtrl : MonoBehaviour
     //    transform.position = Vector3.Lerp(transform.position, newPosition, Time.deltaTime);
     //}
 
-    private void OnDrawGizmos()
+    public Transform GetGoodsObjectFollowTransform()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, playerRadius);
-        Gizmos.DrawLine(transform.position, transform.position + Vector3.down * playerHeight);
-        Gizmos.DrawWireSphere(transform.position + Vector3.down * playerHeight, playerRadius);
+        return goodsObjectHoldPoint;
+    }
+
+    public void SetGoodsObject(GoodsObject goodsObj)
+    {
+        this.goodsObject = goodsObj;
+    }
+
+    public GoodsObject GetGoodsObject() { return goodsObject; }
+
+    public void ClearGoodsObject()
+    {
+        goodsObject = null;
+    }
+
+    public bool HasObject()
+    {
+        return goodsObject != null;
     }
 }

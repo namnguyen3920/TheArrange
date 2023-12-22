@@ -2,10 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClearConveyor : MonoBehaviour
+public class ClearConveyor : BaseConveyor
 {
-    public void Interact()
+    public override void Interact(PlayerCtrl player)
     {
-        Debug.Log("Interact");
+        if (!HasObject())
+        {
+            if(player.HasObject())
+            {
+                player.GetGoodsObject().SetGoodsObjectParent(this);
+            }
+        }
+        else
+        {
+            if (HasObject())
+            {
+
+            }
+            else
+            {
+                GetGoodsObject().SetGoodsObjectParent(this);
+            }
+        }
     }
 }
