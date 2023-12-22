@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2833062919464220074}
+  - component: {fileID: 9214727205648348390}
   m_Layer: 0
   m_Name: Conveyor_Visual
   m_TagString: Untagged
@@ -32,6 +33,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9214727205648348390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630781762729894020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b84706de8904fd942937d9cd1181c990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearConveyor: {fileID: 0}
+  visualGameObject: {fileID: 8482955628009578480}
 --- !u!1001 &866012467407640888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89,6 +104,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e29767dd98b894040be14220f53fe1a1, type: 3}
+--- !u!1 &8482955628009578480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8772223667473811144, guid: e29767dd98b894040be14220f53fe1a1, type: 3}
+  m_PrefabInstance: {fileID: 866012467407640888}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9147465733064164682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8284057459505323122, guid: e29767dd98b894040be14220f53fe1a1, type: 3}
