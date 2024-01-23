@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DeliverySpot : BaseConveyor
 {
+
+    [SerializeField] private List<GoodsObject> goodsObj;
+
     public override void Interact(PlayerCtrl player)
     {
         if (!HasObject())
@@ -11,11 +14,13 @@ public class DeliverySpot : BaseConveyor
             if (player.HasObject())
             {
                 player.GetGoodsObject().SetGoodsObjectParent(this);
+                
             }
+            ScoreMN.Instance.AddScore();
         }
-
         else
         {
+            
 
         }
     }

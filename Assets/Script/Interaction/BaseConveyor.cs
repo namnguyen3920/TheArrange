@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseConveyor : MonoBehaviour, IGoodsObjectsParent
+public class BaseConveyor :  MonoBehaviour, IGoodsObjectsParent
 {
     [SerializeField] Transform spawner;
 
@@ -11,26 +11,23 @@ public class BaseConveyor : MonoBehaviour, IGoodsObjectsParent
     {
         Debug.Log("Interact");
     }
-
     public Transform GetGoodsObjectFollowTransform()
     {
         return spawner;
     }
-
     public void SetGoodsObject(GoodsObject goodsObj)
     {
         this.goodsObject = goodsObj;
     }
-
     public GoodsObject GetGoodsObject() { return goodsObject; }
-
     public void ClearGoodsObject()
     {
         goodsObject = null;
     }
-
     public bool HasObject()
     {
         return goodsObject != null;
     }
+
+
 }

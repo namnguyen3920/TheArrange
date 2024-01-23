@@ -155,8 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26fa7cd87ffbd754c95498d64b1560f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goodsObjectSO: {fileID: 11400000, guid: 88785ebaac2b1f64d9a9db65428aa72b, type: 2}
+  isDestroyOnLoad: 0
   spawner: {fileID: 1379308718396803629}
+  goodsObj: []
 --- !u!4 &1379308718396803629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 135079431839747229, guid: ffb5debf843934b4d8d31230243bd034, type: 3}

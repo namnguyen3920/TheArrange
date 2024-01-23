@@ -1,0 +1,49 @@
+ManifestFileVersion: 0
+CRC: 32888353
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: eac87f6da42fb1ff14a9edc77d2b2ff2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3a98af27271f047e4131472631314ccf
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 51b2066c8184a464a8a0d956e351485b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 521041eab79c6584b9dd14f93c57d8a2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b84706de8904fd942937d9cd1181c990, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9f5fbee132f42bd4a97a2d92d0e967bb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 26fa7cd87ffbd754c95498d64b1560f3, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/BundlesAssets/SceneryObjects.prefab
+Dependencies: []

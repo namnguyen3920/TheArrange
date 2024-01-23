@@ -12,6 +12,7 @@ public class GoodsBasket : BaseConveyor
         {
             Transform goodsObjectTransform = Instantiate(goodsObjectSO.prefab);
             goodsObjectTransform.GetComponent<GoodsObject>().SetGoodsObjectParent(player);
+            
         }
     }
     

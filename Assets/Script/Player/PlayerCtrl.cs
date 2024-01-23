@@ -2,14 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerCtrl : MonoBehaviour, IGoodsObjectsParent
+public class PlayerCtrl : Singleton<PlayerCtrl>, IGoodsObjectsParent
 {
 
-    public static PlayerCtrl Instance { get; private set; }
 
     public event EventHandler<OnSelectedChangedArgs> OnSelectedChanged;
 
@@ -33,10 +31,6 @@ public class PlayerCtrl : MonoBehaviour, IGoodsObjectsParent
     private GoodsObject goodsObject;
     Vector3 lastInteractDir;
 
-    private void Awake()
-    {
-        Instance = this;
-    }
     // Start is called before the first frame update
     void Start()
     {

@@ -1,0 +1,13 @@
+ManifestFileVersion: 0
+CRC: 1799254916
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: scenesobjectbundle
+      Dependencies: {}
+    Info_1:
+      Name: bgbundle
+      Dependencies: {}
+    Info_2:
+      Name: playerbundle
+      Dependencies: {}

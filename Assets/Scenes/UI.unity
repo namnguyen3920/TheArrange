@@ -1211,6 +1211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 353346157}
   - component: {fileID: 353346158}
+  - component: {fileID: 353346159}
   m_Layer: 5
   m_Name: DecisionButton
   m_TagString: Untagged
@@ -1248,6 +1249,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353346156}
   m_CullTransparentMesh: 1
+--- !u!114 &353346159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353346156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ffdac804bfcada4c83418a582d18dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroupMenu: {fileID: 0}
+  rectTransformMenu: {fileID: 0}
+  canvasGroupSetting: {fileID: 0}
+  rectTransformSetting: {fileID: 0}
+  authenticateEndPoint: http://localhost:8000/account
+  username: {fileID: 426013482}
 --- !u!1 &361528792
 GameObject:
   m_ObjectHideFlags: 0
@@ -4864,6 +4883,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 353346159}
+        m_TargetAssemblyTypeName: RegName, Assembly-CSharp
+        m_MethodName: OnApply
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 993907016}
         m_TargetAssemblyTypeName: UISprAnim, Assembly-CSharp
         m_MethodName: OnClickFadeIn
@@ -5611,7 +5642,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 654211003}
   m_HandleRect: {fileID: 654211002}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -6873,7 +6904,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737915106}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

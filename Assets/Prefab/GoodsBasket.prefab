@@ -370,5 +370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5fbee132f42bd4a97a2d92d0e967bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goodsObjectSO: {fileID: 0}
+  isDestroyOnLoad: 0
   spawner: {fileID: 0}
+  goodsObjectSO: {fileID: 0}

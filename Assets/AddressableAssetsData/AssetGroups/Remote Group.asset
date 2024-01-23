@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Remote Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Remote Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 1ea5452b4b02b5a4286fe33ca5af9f81
+  m_SerializeEntries:
+  - m_GUID: 97381e6f83adaf9458c76b382bab1169
+    m_Address: Assets/BundlesAssets/BG.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1cb0ff1a678be1e4a968f0d2ee650f57
+    m_Address: Assets/BundlesAssets/PlayerController.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9c3e69f14807c6d4cb6ed48f63e45e24
+    m_Address: Assets/BundlesAssets/SceneryObjects.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 08953c9b9c8195e4bb840d00d9ed37e4
+    m_Address: Assets/Material/Glass.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d7afe720dec82c3438e219879e01dcb6
+    m_Address: Assets/Material/Ground Color.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6b3fa9f835798054ab06d0902a25ee24
+    m_Address: Assets/Material/New Material.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5e76b6dd1a19f20429ac266156bd2265
+    m_Address: Assets/Material/PlayerColor.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 049bfff559b41cc4ca493051385dd444, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b9b970d5d7e4fe548ab54cdea3fcaa20, type: 2}
+    - {fileID: 11400000, guid: a0c4f7a61d74d1a4cb8ab313e7ad470e, type: 2}
